@@ -1,0 +1,35 @@
+data:
+  data_dir: ../imagenet/ILSVRC/Data/CLS-LOC
+
+model:
+  model_family: openai_clip
+  model_size: large
+  num_classes: 2
+
+watermark:
+  encoder:
+    watermark_size: 32
+    feature_dim: 1024
+  decoder:
+    watermark_size: 32
+    feature_dim: 1024
+  block_idx: 12
+  channel_idx: 46
+  lr_factor: 10
+
+log:
+  directory: logs_clip
+  experiment: demo
+  top_k_accuracy: 1
+
+optimizer:
+  type: adamw
+  lr: 0.00001
+
+lr_scheduler:
+  type: none
+
+training:
+  num_epochs: 5
+  batch_size: 16
+  num_workers: 4

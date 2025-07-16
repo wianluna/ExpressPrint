@@ -1,0 +1,12 @@
+
+__pycache__/
+*/ILSVRC/
+*/KonIQ-10k/
+results/
+*/logs*/
+checkpoints/
+custom_presets/
+nohup.out
+*/presets/*.yaml
+pymp-*/
+*.pyc

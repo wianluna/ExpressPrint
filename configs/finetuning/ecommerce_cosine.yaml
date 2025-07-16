@@ -1,0 +1,29 @@
+data:
+  data_dir: ../data/ecommerce_product_images
+
+model:
+  model_family: openai_clip
+  model_size: large
+  num_classes: 9
+
+model_path: logs_clip/demo/model.pth
+
+log:
+  directory: logs_clip
+  experiment: demo_ft_classification
+  top_k_accuracy: 1
+  
+optimizer:
+  type: adamw
+  lr: 0.000001
+
+lr_scheduler:
+  type: cosine
+  params:
+    lr_peak_epoch: 3
+    lr_peak: 0.00001
+
+training:
+  num_epochs: 5
+  batch_size: 32
+  num_workers: 4

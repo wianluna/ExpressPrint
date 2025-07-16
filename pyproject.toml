@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "expressprint"
+version = "0.1.0"
+description = "Watermarking for Visual Foundation Models via expressive activations"
+authors = [
+  { name="Anna Chistyakova", email="a.chistyakova@ispras.ru" },
+  { name="Mikhail	Pautov", email="mikhail.pautov@skoltech.ru" },
+]
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.setuptools]
+py-modules = ["expressprint"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.black]
+line-length = 120
+extend-exclude = ""
+
+[tool.ruff]
+line-length = 120
+lint.extend-select = ["I"]
