@@ -3,9 +3,9 @@ import matplotlib.ticker as ticker
 import numpy as np
 import torch
 import torch.nn as nn
+from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-from expressprint.datasets import WatermarkDataLoader
 from expressprint.methods.watermarking import Watermarker
 from expressprint.models import BaseModel, WMDecoder, WMEncoder
 
@@ -60,7 +60,7 @@ class ExpressPrintWatermarker(Watermarker):
 
         return self.decoded_message
 
-    def evaluate(self, test_loader: WatermarkDataLoader) -> None:
+    def evaluate(self, test_loader: DataLoader) -> None:
         all_bit_errors = []
 
         self.wm_encode_hook = self.wm_layer_encode.register_forward_hook(self._hook_encode_wm)
