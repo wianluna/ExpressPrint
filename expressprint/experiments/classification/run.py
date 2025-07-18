@@ -6,7 +6,6 @@ from expressprint.experiments.classification import DataLoader, Trainer, create_
 from expressprint.models import create_vit
 from expressprint.utils.config import load_config
 
-
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--config", type=str, required=True)

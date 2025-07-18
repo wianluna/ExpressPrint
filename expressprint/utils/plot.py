@@ -1,3 +1,4 @@
+from pathlib import Path
 from typing import Optional
 
 import matplotlib.pyplot as plt
@@ -61,6 +62,7 @@ def plot_layer_ax_vit(mean, model_name, plot_path: Optional[str] = None):
     plot_layer_ax_vit_sub(ax, mean, model_name)
 
     if plot_path:
+        plot_path = Path(plot_path)
         plot_path.parent.mkdir(parents=True, exist_ok=True)
         plt.savefig(plot_path, bbox_inches="tight", dpi=200, facecolor=fig.get_facecolor())
     else:

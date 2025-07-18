@@ -7,7 +7,6 @@ from expressprint.models import WMDecoder, WMEncoder, create_vit
 from expressprint.trainers.wm_trainer import ExpressPrintTrainer
 from expressprint.utils import load_config
 
-
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--config", type=str, required=True)
