@@ -6,6 +6,17 @@ ExpressPrint is the first watermarking method designed specifically for Vision T
   <img src="assets/expressprint_schema.jpeg" alt="ExpressPrint Overview" />
 </p>
 
+## 📓 Demo
+
+A step-by-step demonstration of **ExpressPrint** is available in the following Jupyter Notebook:
+
+[`demo/ExpressPrint_demo.ipynb`](demo/ExpressPrint_demo.ipynb)
+
+The notebook showcases key components of ExpressPrint, including:
+- model loading and watermark embedding,
+- suspect model evaluation,
+- visualization of watermark detection performance.
+
 ## 📦 Installation
 Install ExpressPrint directly from GitHub:
 ```bash
